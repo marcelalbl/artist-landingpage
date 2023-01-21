@@ -99,7 +99,7 @@ body {
   ========================================
 */
 section {
-    height: 30vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,19 +107,20 @@ section {
     background-color: var(--primary-color-white4, #666A6D);
 }
 
-header {
-    background-color: var(--primary-color-black2, black);
-}
-footer {
-    background-color: var(--primary-color-black4, black)
-}
-
 /*
   ========================================
-  Navigation
+  Navigation 
   ========================================
 */  
-ul {
+header {
+    background-color: var(--primary-color-black2, black);
+    position: fixed;
+    top: 0; 
+	left: 0; 
+	right: 0; 
+}
+
+header ul {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -127,19 +128,41 @@ ul {
     padding-left: 0;
 }
 
-li {
-    margin:auto;
+header li {
+    width: 25%;
+    text-align: center;
 }
 
-li:hover {
-    background-color: var(--primary-color-white, #FFF);
-}
-
-li a {
+header li a {
     display: inline-block;
     padding: 10px 15px;
     text-decoration: none;
     color: var(--primary-color-white, #FFF);
+}
+
+footer {
+    background-color: var(--primary-color-black4, black);
+    height: 10%;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0 10%;
+}
+
+footer li {
+    text-align: right;
+    height: 2%;
+    
+}
+
+footer li a {
+    color: var(--primary-color-white, #FFF);
+    margin-right: 5%;
+}
+
+li:hover {
+    background-color: var(--primary-color-white, #FFF);
 }
 
 li:hover a {
