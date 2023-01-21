@@ -1,14 +1,22 @@
 :root {
-    /*  VARIABLE DECLARATIONS HERE  */
+    /*  GRAY COLOR PALETTE  */
+    --primary-color-black: #1C1D1E;           /* Eerie Black    */
+    --primary-color-black2: #333537;          /* Jet            */
+    --primary-color-black3: #4D5052;          /* Feldgrau       */
+    --primary-color-black4: #666A6D;          /* Dim Gray       */
+    --primary-color-white: #E8E9E9;           /* Platinum       */
+    --primary-color-white2: #D1D3D4;          /* Platinum       */
+    --primary-color-white3: #BABDBF;          /* Gray           */
+    --primary-color-white4: #808488;          /* Light Gray     */
 
 }
 
+
 /*
-#################################################################################
-
-CSS RESET   (https://www.joshwcomeau.com/css/custom-css-reset/)     
-
-#################################################################################
+  ========================================
+  CSS RESET   
+    https://www.joshwcomeau.com/css/custom-css-reset/ 
+  ========================================
 */
 /*
   1. Use a more-intuitive box-sizing model.
@@ -63,18 +71,77 @@ p, h1, h2, h3, h4, h5, h6 {
     isolation: isolate;
 }
 
+
 /*
-#################################################################################
-
-Import font from Google (https://fonts.google.com/specimen/Solitreo)
-
-#################################################################################
+  ========================================
+  Font from Google 
+    (https://fonts.google.com/specimen/Solitreo)
+  ========================================
 */
-
 :root {
-    --primary-font: 'Solitreo', cursive
+    --primary-font: 'Solitreo', cursive;
 }
 
 body {
     font-family: var(--primary-font, sans-serif);
+}
+
+/*
+  ========================================
+  Outline for Development
+  ========================================
+*/
+/* * { outline: 1px solid red !important; } */
+
+/*
+  ========================================
+  Basic Styling
+  ========================================
+*/
+section {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color-white4, #666A6D);
+}
+
+header {
+    background-color: var(--primary-color-black2, black);
+}
+footer {
+    background-color: var(--primary-color-black4, black)
+}
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/  
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 0;
+}
+
+li {
+    margin:auto;
+}
+
+li:hover {
+    background-color: var(--primary-color-white, #FFF);
+}
+
+li a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--primary-color-white, #FFF);
+}
+
+li:hover a {
+    color: var(--primary-color-black2, #000);
 }
