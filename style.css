@@ -142,7 +142,6 @@ header li a {
 
 footer {
     background-color: var(--primary-color-black4, black);
-    height: 10%;
 }
 
 footer ul {
@@ -168,3 +167,58 @@ li:hover {
 li:hover a {
     color: var(--primary-color-black2, #000);
 }
+
+
+/*
+  ========================================
+  Polaroid Gallery
+    https://css-tricks.com/css-infinite-slider-flipping-through-polaroid-images/
+  ========================================
+*/
+.gallery {
+    display: grid;
+    width: 25vw;
+}
+
+.gallery > img {
+    grid-area: 1 / 1;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 10px solid var(--primary-color-white2);
+    box-shadow: 0 0 4px var(--primary-color-black);
+    /* Animation properties */
+    z-index: 2;
+    animation: slide 8s infinite, z-order 8s infinite steps(1);
+}
+
+.gallery > img:last-child {
+    animation-name: slide, z-order-last;
+}
+
+.gallery > img:nth-child(2) { animation-delay: -2s; } /* ((1 - index)/#pics) * duration */
+.gallery > img:nth-child(3) { animation-delay: -4s; }
+.gallery > img:nth-child(4) { animation-delay: -6s; }
+
+@keyframes slide {
+    12.25% { transform: translateX(110%); }     /* 50 / #pics */
+    25.00% { transform: translateX(0%); }       /* 100 / #pics */
+}
+
+@keyframes z-order {
+    12.25%,                                     /* 50 / #pics */    
+    25.00% { z-index: 1; }                      /* 100 / #pics */
+    75.00% { z-index: 2; }                      /* 100 - 100 / #pics */
+}
+
+@keyframes z-order-last {
+    12.25%,                                     /* 50 / #pics */
+    25.00% { z-index: 1; }                      /* 100 / #pics */
+    87.50% { z-index: 2; }                      /* 100 - 50 / #pics */
+}
+
+/* "Random" rotation to make the images look like polaroids [-20deg, +20deg] */
+.gallery > img:nth-child(1) { rotate: 10deg; } 
+.gallery > img:nth-child(2) { rotate: -12.5deg; } 
+.gallery > img:nth-child(3) { rotate: 5deg; }
+.gallery > img:nth-child(4) { rotate: -20deg; }
