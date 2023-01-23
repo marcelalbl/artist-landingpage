@@ -5,11 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design One</title>
+    <script src="https://kit.fontawesome.com/a7e9f794eb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/reset.css">
     <!-- Force browser to always reload css file -->
     <link rel="stylesheet" href="../css/design1.css?rnd=@Function.GUID~">
+
 </head>
 <body>
-    <h1>Hello from <b>Design Two</b> page!</h1>
+    <header class="nav-container">
+        <nav class="menu-overlay">
+            <i class="fas fa-times"></i>
+            <ul class="list">
+                <li><a href="../../index.html">Home</a></li><!--
+                --><li><a href="../pages/design1.html">Design One</a></li><!--
+                --><li><a href="../pages/design2.html">Design Two</a></li><!--
+                --><li><a href="../pages/about.html">About Me</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <div class="menu">
+        <i class="fas fa-bars"></i>
+    </div>
+    <section>
+        <div class="container">
+            <img alt="Image 1" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80">
+            <img alt="Image 2" src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80">
+            <img alt="Image 3" src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80">
+            <img alt="Image 4" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80">
+        </div> 
+    </section>
+    <script>
+        let overlay = document.querySelector(".menu-overlay");
+        let open = document.querySelector(".fa-bars");
+        let close = document.querySelector(".fa-times");
+
+        open.addEventListener("click", () => {
+            overlay.style.transform = "translateY(0)";
+        });
+
+        close.addEventListener("click", () => {
+            overlay.style.transform = "translateY(-110%)";
+        });
+    </script>
 </body>
 </html>
