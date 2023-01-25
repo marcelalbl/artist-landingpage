@@ -1,0 +1,82 @@
+:root {
+    /*  GRAY COLOR PALETTE  */
+    --primary-color-black: #1C1D1E;           /* Eerie Black    */
+    --primary-color-black2: #333537;          /* Jet            */
+    --primary-color-black3: #4D5052;          /* Feldgrau       */
+    --primary-color-black4: #666A6D;          /* Dim Gray       */
+    --primary-color-white: #E8E9E9;           /* Platinum       */
+    --primary-color-white2: #D1D3D4;          /* Platinum       */
+    --primary-color-white3: #BABDBF;          /* Gray           */
+    --primary-color-white4: #808488;          /* Light Gray     */
+}
+
+/*
+  ========================================
+  Font from Google 
+    (https://fonts.google.com/specimen/Solitreo)
+  ========================================
+*/
+:root {
+    --primary-font: 'Solitreo', cursive;
+}
+
+body {
+    font-family: var(--primary-font, sans-serif);
+}
+
+/*
+  ========================================
+  Outline for development purpose
+  ========================================
+*/
+/* * { outline: 1px solid red !important; } */
+
+
+/*
+  ========================================
+  Card title inside
+    https://codepen.io/daviddarnes/pen/oEEqdp?editors=1100
+  ========================================
+*/
+section {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+
+h2 {
+    margin: 1rem 1rem -.5rem 0;
+    font-size: 2rem;
+}
+
+.heading-frame {
+    display: grid;
+    box-shadow: 0 3px 6px #000;
+    grid-template-columns: max-content;
+    grid-template-rows: auto max-content;
+    background: #333 center;
+    background-size: cover;
+    color: white;
+    width: 80vw;
+    height: 80vh;
+    padding: 2rem;
+}
+
+.heading-frame::before, .heading-frame:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+}
+
+.heading-frame:before {
+    grid-row: 1 / 2;
+    border-right: none;
+    border-bottom: none;
+}
+
+.heading-frame:after {
+    grid-row: 1 / span 2;
+    border-left: none;
+}
