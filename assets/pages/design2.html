@@ -5,34 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Two</title>
+    <script src="https://kit.fontawesome.com/a7e9f794eb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/reset.css">
     <!-- Force browser to always reload css file -->
     <link rel="stylesheet" href="../css/design2.css?rnd=@Function.GUID~">
 </head>
-<body>
-    <section>
-        <div class="heading-frame" 
-        style="background-image: url(https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
-            <h2>Excitement</h2>
+<body data-nav="false">
+    <button id="nav-toggle" type="button" onclick="toggleNav()">
+        <i class="open fas fa-light fa-bars-staggered"></i>
+        <i class="close fas fa-light fa-xmark"></i>
+    </button>
+    <nav>
+        <div id="nav-links">
+            <a class="nav-link" href="../../index.html">
+                <h2 class="nav-link-label">Home</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80">
+            </a>
+            <a class="nav-link" href="../pages/design1.html">
+                <h2 class="nav-link-label">Design One</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1621440318464-72633426377b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80">
+            </a>
+            <a class="nav-link" href="../pages/design2.html">
+                <h2 class="nav-link-label">Design Two</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1567254790685-6b6d6abe4689?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80">
+            </a>
+            <a class="nav-link" href="../pages/about.html">
+                <h2 class="nav-link-label">About Me</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+            </a>
         </div>
-    </section>
-    <section>
-        <div class="heading-frame" 
-        style="background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
-            <h2>Enjoyment</h2>
-        </div>
-    </section>
-    <section>
-        <div class="heading-frame" 
-        style="background-image: url(https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
-            <h2>Entertainment</h2>
-        </div>
-    </section>
-    <section>
-        <div class="heading-frame" 
-        style="background-image: url(https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
-            <h2>Music</h2>
-        </div>
-    </section>
+    </nav>
+    <main>
+        <section>
+            <div class="heading-frame" 
+            style="background-image: url(https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
+                <h2 class="card-heading">Excitement</h2>
+            </div>
+        </section>
+        <section>
+            <div class="heading-frame" 
+            style="background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
+                <h2 class="card-heading">Enjoyment</h2>
+            </div>
+        </section>
+        <section>
+            <div class="heading-frame" 
+            style="background-image: url(https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
+                <h2 class="card-heading">Entertainment</h2>
+            </div>
+        </section>
+        <section>
+            <div class="heading-frame" 
+            style="background-image: url(https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
+                <h2 class="card-heading">Music</h2>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        const toggleNav = () => {
+            document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
+        };
+    </script>
 </body>
 </html>
