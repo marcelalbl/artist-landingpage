@@ -96,8 +96,7 @@ img {
     https://codepen.io/kiran-r-raj/pen/GRWQPeY?editors=0110
   ========================================
 */
-
-.menu-overlay {
+.nav-menu {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -111,22 +110,23 @@ img {
     align-items: center;
 }
 
-.list {
+.nav-list {
     position: relative;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.list li {
-    height: 100px;
-    width: 250px;
+.nav-list li {
+    min-height: 100px;
+    min-width: 250px;
     padding: 20px;
+    text-align: center;
 }
 
-.list a {
+.nav-list a {
     font-size: 2rem;
     text-decoration: none;
     color: black;
@@ -134,50 +134,37 @@ img {
     border-bottom: 2px solid transparent;
     transition: all .4s ease;
 }
-
-.list a:hover {
+.nav-list a:hover {
     border-bottom: 2px solid red;
     color: var(--primary-color-black, black);
 }
 
-.menu-overlay .fas {
+.menu-icon {
     position: absolute;
     right: 20px;
     top: 20px;
     font-size: 2.5rem;
+    color: gray;
     transition: all 0.3s ease;
+}
+
+.nav-menu .menu-icon {
     z-index: 100;
 }
 
-.menu-overlay .fas:hover {
+.nav-menu .menu-icon:hover {
     color: black;
     transform: scale(1.1) rotate(180deg);
 }
 
-.menu {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-.fas {
-    font-size: 2rem;
-    color: gray;
-}
-
-.fas:hover {
+.nav-menu-toggle .menu-icon:hover {
     color: white;
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 650px) {
-    .list a {
+    .nav-list a {
         font-size: 1.4rem;
-    }
-}
-  
-@media screen and (max-width: 450px) {
-    .list {
-        display: flex;
         flex-direction: column;
     }
 }
